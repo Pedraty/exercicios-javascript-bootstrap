@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, Celsius, Fahrenheit">
+    <meta name="descripton" content="  Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius. A fórmula de conversão é C=(F-32) *(5/9), sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.  ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        body{
+            text-align: center;
+        }
+        
+    </style>
+    <title>E02L06 Farenheit para Celsius</title>
+</head>
+<body>
+    <div class="container-fluid pt-5">
+        <h1>Conversão de Farenheit para Celsius</h1>
+        <h2>Boas Vindas</h2>
+        <p>Converta Farenheit para Celsius. Vamos começar?</p>
+        <h3>Inserindo Valores</h3>
+        <div class="container w-50">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Comece digitando o valor em Farenheit</label>
+                  <input type="text" class="form-control" id="farenheit">
+                </div>
+              </form>
+            <button type="button" class="btn btn-primary" onClick="converter()">Calcular</button>
+            <div class="container d-flex justify-content-center"></div>
+        </div>
+        <section id="footer"></section>
+    </div>
+    <img src="/svg.png" alt="Wave" class="footer-img">
+    
+
+    <script>
+    
+        function converter(){
+            let farenheit = document.getElementById("farenheit")
+                farenheit = parseFloat(farenheit.value)
+            let celsius = (farenheit-32)*(5/9)
+            alert(farenheit+"°F é igual a "+celsius+"°C")
+        }
+    </script>
+</body>
+</html>
