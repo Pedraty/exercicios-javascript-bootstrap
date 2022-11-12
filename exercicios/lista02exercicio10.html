@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript,troca, valores, inteiros">
+    <meta name="descripton"
+        content="Ler dois valores (inteiros, reais ou caracteres) para as variáveis A e B, e efetuar a troca dos valores de forma que a variável A passe a possuir o valor da variável B e a variável B passe a possuir o valor da variável A. Apresentar os valores trocados.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        *{
+            margin-bottom: 20px;
+        }
+        body {
+            text-align: center;
+            background-color: #212529;
+            color: antiquewhite;
+            
+        }
+        input[type="text"], .card{
+            background-color: #303030;
+            border: #4c4c4c 1px solid;
+            color: antiquewhite;
+        }
+        h2, h3{
+            margin-bottom: 40px;
+        }
+    </style>
+    <title>E02L010 Troca de valores inteiros</title>
+</head>
+
+<body>
+    <div class="container-fluid pt-5">
+        <h1>Troque os valores e se divirta!</h1>
+        <h2>Boas Vindas</h2>
+        <h3>Inserindo Valores</h3>
+        <div class="container w-50">
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Insira um valor</h5>
+                      <p class="card-text">Pode ser qualquer número que venha a mente.</p>
+                      <input type="text" class="form-control" id="valorA">
+                      <div id="valor-a"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Insira um valor</h5>
+                      <p class="card-text">Experimente colocar um número bem diferente.</p>
+                      <input type="text" class="form-control" id="valorB">
+                      <div id="valor-b"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Comece digitando um valor inteiro qualquer</label>
+                    <input type="text" class="form-control" id="valorA">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Agora, digite um outro valor inteiro (Hey, psiu! Tente um número que seja diferente do último, vai ser mais legal!)</label>
+                    <input type="text" class="form-control" id="valorB">
+                </div>
+            </form> -->
+            <button type="button" class="btn btn-outline-warning" onClick="trocar()">Trocar</button>
+        </div>
+    </div>
+
+    <script>
+
+        function trocar() {
+            let valorA = document.getElementById("valorA");
+            valorA = parseFloat(valorA.value);
+            let valorB = document.getElementById("valorB");
+            valorB = parseFloat(valorB.value);
+            let valorAuxiliar = valorA;
+            valorA = valorB;
+            valorB = valorAuxiliar;
+
+            let box_A = document.getElementById('valor-a')
+            box_A.innerText = valorA
+
+            let box_B = document.getElementById('valor-b')
+            box_B.innerText = valorB
+
+        }
+    </script>
+        <img src="/wave.png" alt="Wave" class="footer-img">
+</body>
+
+</html>
