@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript,prestação, atraso">
+    <meta name="descripton"
+        content=" Efetuar o cálculo e a apresentação do valor de uma prestação em atraso, utilizando a fórmula PRESTACAO=VALOR+(VALOR*TAXA/100) *TEMPO).  ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        body {
+            text-align: center;
+            background-color: #212529;
+            color: antiquewhite;
+        }
+        input[type="text"]{
+            background-color: #303030;
+            border: #4c4c4c 1px solid;
+            color: antiquewhite;
+        }
+    </style>
+    <title>E02L09 Prestação em Atraso</title>
+</head>
+
+<body>
+    <div class="container-fluid pt-5">
+        <h1>Calcular valor a pagar de uma prestação em atraso</h1>
+        <h2>Boas Vindas</h2>
+        <h3>Inserindo Valores</h3>
+        <div class="container w-50">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Comece digitando o valor da prestação original</label>
+                    <input type="text" class="form-control" id="valorOriginal">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Agora, digite a porcentagem da taxa de atraso</label>
+                    <input type="text" class="form-control" id="taxa">
+                </div>
+            </form>
+            <button type="button" class="btn btn-outline-warning" onClick="calcular()">Calcular</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        function calcular() {
+            let valorOriginal = document.getElementById("valorOriginal")
+            valorOriginal = parseFloat(valorOriginal.value)
+            let taxa = document.getElementById("taxa")
+            taxa = parseFloat(taxa.value)
+            let prestacaoAtraso = valorOriginal+((valorOriginal*taxa)/100)
+            alert("O valor da prestação atrasada chegou a R$" + prestacaoAtraso)
+        }
+    </script>
+        <img src="/wave.png" alt="Wave" class="footer-img">
+</body>
+
+</html>
