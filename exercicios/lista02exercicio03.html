@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, multiplicação">
+    <meta name="descripton" content=" Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual de reajuste. Calcular e escrever o valor do novo salário.">
+    <meta name="robots" content="index, follow">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>E02L03 Novo salário</title>
+</head>
+<body>
+    <h1>Reajuste salarial da Fonte Seca!</h1>
+    <h2>Boas Vindas</h2>
+    <p>Esta é uma ferramenta para te ajudar a saber o valor final do seu salário com o reajuste incluso. Vamos começar?</p>
+    <h3>Inserindo Valores</h3>
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Comece digitando o valor do seu salário mensal</label>
+          <input type="text" class="form-control" id="salarioMensal">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Agora, digite o percentual de reajuste</label>
+          <input type="text" class="form-control" id="porcentoReajuste">
+        </div>
+      </form>
+    <button type="button" class="btn btn-warning" onClick="reajuste()">Calcular</button>
+    <div class="container d-flex justify-content-center"></div>
+    
+
+    <script>
+    
+        function reajuste(){
+            let salarioMensal = document.getElementById("salarioMensal")
+                salarioMensal = parseFloat(salarioMensal.value)
+                //armazenar reajuste Salarial
+            let porcentoReajuste = document.getElementById("porcentoReajuste")
+                porcentoReajuste = parseFloat(porcentoReajuste.value)
+            let reajuste = ((salarioMensal*porcentoReajuste)/100)+salarioMensal
+            alert("O seu salário final é de R$"+reajuste)
+        }
+    </script>
+</body>
+</html>
