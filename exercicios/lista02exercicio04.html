@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, impostos">
+    <meta name="descripton" content=" O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever o custo final ao consumidor. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>E02L04 Custo final de um carro</title>
+</head>
+<body>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="custoFabrica" class="col-form-label">Custo de fábrica</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" id="custoFabrica" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-warning" onClick="custoFinal()">Calcular</button>
+        </div>
+      </div>
+    <script>
+        const distPorcentagem = 28/100;
+        const imposto = 45/100
+        function custoFinal(){
+            let custoFabrica = document.getElementById("custoFabrica");
+            custoFabrica = parseFloat(custoFabrica.value);
+
+            let custoConsumidor = custoFabrica-((custoFabrica*imposto)+(custoFabrica*distPorcentagem))
+            alert("O custo final para o consumidor será de R$"+(custoConsumidor).toFixed(2))
+        }
+
+    </script>
+</body>
+</html>
