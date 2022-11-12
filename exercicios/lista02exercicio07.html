@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, raio, circulo">
+    <meta name="descripton" content="  Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula: Volume = π*Raio^2*Altura  ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        body{
+            text-align: center;
+        }
+        
+    </style>
+    <title>E02L07 Calcular volume de óleo</title>
+</head>
+<body>
+    <div class="container-fluid pt-5">
+        <h1>Calcular volume de óleo</h1>
+        <h2>Boas Vindas</h2>
+        <h3>Inserindo Valores</h3>
+        <div class="container w-50">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Comece digitando o valor do raio da tampa da lata</label>
+                  <input type="text" class="form-control" id="raio">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Agora, digite o valor da altura da lata</label>
+                  <input type="text" class="form-control" id="altura">
+                </div>
+              </form>
+            <button type="button" class="btn btn-danger" onClick="volume()">Calcular</button>
+            <div class="container d-flex justify-content-center"></div>
+            </div>
+    </div>
+    
+
+    <script>
+    
+        function volume(){
+            let raio = document.getElementById("raio")
+                raio = parseFloat(raio.value)
+            let altura = document.getElementById("altura")
+                altura = parseFloat(altura.value)
+            let volume = (3.14*raio*2)*altura
+            alert("O volume da lata é igual a "+volume+"m³")
+        }
+    </script>
+</body>
+</html>
