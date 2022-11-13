@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, matematica">
+    <meta name="descripton"
+        content="Ler dois valores (considere que não serão lidos valores iguais) e escrever o maior deles. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+
+        </style>
+    <title>FACCAT19 Maior número</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://th.bing.com/th/id/R.77708727be173289d8f9e89e7651dde4?rik=8ZAyZKCE6zW3wg&riu=http%3a%2f%2f25.media.tumblr.com%2ftumblr_m7gp1fbrF31rpxgkao1_500.gif&ehk=z0N8EaI4f3LIazs4K7nh%2flHG7V2OmJ8eNCvYSx7wahE%3d&risl=&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Maior número</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor1" class="form-label">Primeiro Valor:</label>
+                                    <input type="text" class="form-control" id="valor1">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor2" class="form-label">Segundo Valor:</label>
+                                    <input type="text" class="form-control" id="valor2">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-warning" onclick="calcular()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="resultado"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            let valor1 = document.getElementById("valor1");
+            valor1 = parseFloat(valor1.value);
+
+            let valor2 = document.getElementById("valor2");
+            valor2 = parseFloat(valor2.value);
+
+            if (valor1>valor2) {
+                alert(valor1+" é maior ")
+            } else {
+                alert(valor2+" é maior ")
+            }
+        }
+    </script>
+</body>
+
+</html>
