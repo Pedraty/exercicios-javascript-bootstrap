@@ -1,0 +1,107 @@
+<DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Pedro Fonseca">
+        <meta name="keyword" content="Exercício, JavaScript, maior, jogo, time, matematica">
+        <meta name="descripton"
+            content="Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE. ">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+        <title>FACCAT36 Produto e soma das idades</title>
+    </head>
+
+    <body>
+        <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+            <div class="row">
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://media.tenor.com/PS6medrGxqwAAAAd/cat-kiss.gif" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Produto e soma das idades</h5>
+                            <form>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="homem1" class="form-label">Digite a idade do homem 1:</label>
+                                        <input type="text" class="form-control" id="homem1">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="homem2" class="form-label">Digite a idade do homem 2:</label>
+                                        <input type="text" class="form-control" id="homem2">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="mulher1" class="form-label">Digite a idade da mulher 1:</label>
+                                        <input type="text" class="form-control" id="mulher1">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="mulher2" class="form-label">Digite a idade da mulher 2</label>
+                                        <input type="text" class="form-control" id="mulher2">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row-cols-1">
+                            <button type="button" class="col btn btn-success" onclick="calcular()">
+                                Calcular
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            function calcular() {
+
+                let homem1 = document.getElementById("homem1");
+                homem1 = parseInt(homem1.value);
+
+                let homem2 = document.getElementById("homem2");
+                homem2 = parseInt(homem2.value);
+
+                let mulher1 = document.getElementById("mulher1");
+                mulher1 = parseInt(mulher1.value);
+
+                let mulher2 = document.getElementById("mulher2");
+                mulher2 = parseInt(mulher2.value);
+
+                let newMan, oldMan, newLady, oldLady, soma, produto = 0
+
+                if (homem2 > homem1) {
+                    newMan = homem1;
+                    oldMan = homem2;
+                } else {
+                    newMan = homem2;
+                    oldMan = homem1;
+                }
+                if (mulher2 > mulher1) {
+                    newLady = mulher1;
+                    oldLady = mulher2;
+                } else {
+                    newLady = mulher2;
+                    oldLady = mulher1;
+                }
+                soma = oldMan+newLady;
+                produto = newMan*oldLady
+
+                alert("A soma das idades do homem mais velho com a mulher mais nova é "+soma+"\nO produto das idades do homem mais novo com a mulher mais velha é "+produto)
+            }
+        </script>
+    </body>
+
+    </html>
