@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript,distributiva, matematica,soma,multiplicação">
+    <meta name="descripton"
+        content="Ler dois inteiros (variáveis A e B) e imprimir o resultado do quadrado da diferença do primeiro valor pelo segundo.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>L03E03 Quadrado da diferença</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://th.bing.com/th/id/R.5b34f07a03da864ab4f7f1514c320d7b?rik=dMuDEDRCKpSMNw&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Quadrado da diferença de dois números</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor1" class="form-label">Primeiro valor:</label>
+                                    <input type="text" class="form-control" id="valor1">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="valor2" class="form-label">Segundo valor:</label>
+                                    <input type="text" class="form-control" id="valor2">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-success" data-bs-toggle="modal" onclick="calcular()"
+                            data-bs-target="#exampleModal2">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="resultado"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            let valor1 = document.getElementById("valor1");
+            valor1 = parseFloat(valor1.value);
+
+            let valor2 = document.getElementById("valor2");
+            valor2 = parseFloat(valor2.value);
+
+            let resultado = (valor1-valor2)**2;
+
+            alert("O quadrado de " + valor1 + " menos "+valor2+" é "+resultado)
+
+        }
+    </script>
+</body>
+
+</html>
