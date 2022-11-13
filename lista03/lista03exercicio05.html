@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript,Real, Money,Dolar,Câmbio, Bootstrap">
+    <meta name="descripton"
+        content="Elaborar um programa que efetue a apresentação do valor da conversão em real de um valor lido em dólar. O programa deve solicitar o valor da cotação do dólar e também a quantidade de dólares disponível com o usuário, para que seja apresentado o valor em moeda brasileira.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <style>
+            body{
+                background-color: #202525;
+            }
+            .card{
+                background-color: #303030;
+            }
+            input[type='text']{
+                background-color: #333333;
+                color:rgb(127, 119, 107);
+                border: none;
+            }
+            .card-title{
+                color: rgb(88, 121, 121);
+            }
+            .form-label{
+                color: antiquewhite;
+            }
+
+        </style>
+    <title>L03E05 Dólar para Real</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://th.bing.com/th/id/OIP.vvYtq8VG_f1-SMyKcWsRIQHaE7?pid=ImgDet&rs=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Câmbio: Dólar para Real</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor1" class="form-label">Dólar:</label>
+                                    <input type="text" class="form-control" id="valor1">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="valor2" class="form-label">Cotação Atual:</label>
+                                    <input type="text" class="form-control" id="valor2">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-success" data-bs-toggle="modal" onclick="calcular()"
+                            data-bs-target="#exampleModal2">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="resultado"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            let valor1 = document.getElementById("valor1");
+            valor1 = parseFloat(valor1.value);
+
+            let valor2 = document.getElementById("valor2");
+            valor2 = parseFloat(valor2.value);
+
+            let resultado = (valor1/valor2).toFixed(2)
+
+            alert("$" + valor1 + " são R$"+resultado)
+
+        }
+    </script>
+</body>
+
+</html>
