@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, negativo, positivo, matematica">
+    <meta name="descripton"
+        content="Ler um valor e escrever se é positivo, negativo ou zero.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>FACCAT27 Positivo ou negativo</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://media.tenor.com/6K56GEvUwqwAAAAd/parrot.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Negativo ou Positivo</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor" class="form-label">Digite qualquer valor:</label>
+                                    <input type="text" class="form-control" id="valor">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-outline-danger" onclick="calcular()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            
+            let valor = document.getElementById("valor");
+            valor = parseInt(valor.value);
+
+            if (valor<0) {
+                alert(valor+" é negativo");
+
+            } else{
+                if(valor === 0){
+                    alert(valor+" é neutro");
+                }else {
+                    alert(valor+" é positivo")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
