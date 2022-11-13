@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, multiplicação">
+    <meta name="descripton" content="Inserir dois valores e exibir o produto destes">
+    <meta name="robots" content="index, follow">
+    <title>E05L01 Multiplicação</title>
+    <script src="exercicio05.js"></script>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="button" value="ÁREA DO RETÂNGULO" onclick="retangulo()"
+            style="border: none; color: white; background-color:#12a14e; padding:14px; border-radius: 8px; font-weight: 800; cursor: pointer;">
+    </form>
+
+
+    <script>
+        function retangulo() {
+            var numero1, numero2, resultado;
+            numero1 = parseFloat(prompt("Digite um valor para base do retângulo"));
+            numero2 = parseFloat(prompt("Digite um valor para o lado do retângulo"));
+            resultado = numero1 * numero2;
+            alert("A área do retângulo é " + resultado + "m²")
+        }
+    </script>
+</body>
+
+</html>
