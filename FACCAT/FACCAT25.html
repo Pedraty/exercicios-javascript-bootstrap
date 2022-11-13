@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, conta, saldo, debito, matematica">
+    <meta name="descripton"
+        content="Faça um  algoritmo para ler: número da  conta do cliente, saldo, débito e  crédito. Após,  calcular e escrever o saldo atual (saldo atual = saldo - débito + crédito). Também testar se saldo atual for maior ou igual a zero escrever a mensagem 'Saldo Positivo', senão escrever a mensagem 'Saldo Negativo'.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        .card{
+            background-color: rgb(11, 11, 11);
+            color: rgb(119, 119, 119);
+        }
+        .card-title{
+            color: #28a745;
+        }
+        input[type='text']{
+            background-color: rgb(11, 11, 11);
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-color: #28a745;
+            color: #608769;
+        }
+        p{
+            margin-bottom: 30px;
+            color: #608769;
+        }
+    </style>
+
+    <title>FACCAT24 Cálculo de Comição</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://live.staticflickr.com/3786/11289224964_397d6288f3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bank Emerald</h5>
+                        <p>Segurança para suas finanças<p>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="conta" class="form-label">Número da conta:</label>
+                                    <input type="text" class="form-control" id="conta">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="saldo" class="form-label">Saldo:</label>
+                                    <input type="text" class="form-control" id="saldo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="debito" class="form-label">Débito:</label>
+                                    <input type="text" class="form-control" id="debito">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="credito" class="form-label">Crédito:</label>
+                                    <input type="text" class="form-control" id="credito">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-outline-success" onclick="valorSalario()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function valorSalario() {
+            let saldo = document.getElementById("saldo");
+            saldo = parseInt(saldo.value);
+            
+            let debito = document.getElementById("debito");
+            debito = parseInt(debito.value);
+            
+            let credito = document.getElementById("credito");
+            credito = parseInt(credito.value);
+
+            let saldoAtual = saldo+credito-debito
+
+            if (saldoAtual<0) {
+                alert("Seu saldo atual é de R$"+saldoAtual+"\nSaldo negativo");
+
+            } else{
+                
+                alert("Seu saldo atual é de R$"+saldoAtual+"\nSaldo positivo");
+            }
+        }
+    </script>
+</body>
+
+</html>
