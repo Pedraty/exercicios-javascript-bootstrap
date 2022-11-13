@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript,soma,quadrados, matematica">
+    <meta name="descripton"
+        content="Elaborar um programa que efetue a leitura de três valores (A, B e C) e apresente como resultado final o quadrado da soma dos três valores lidos. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <style>
+            body{
+                background-color: #202025;
+            }
+            .card{
+                background-color: #303030;
+            }
+            input[type='text']{
+                background-color: #333333;
+                color:rgb(127, 119, 107);
+                border: none;
+            }
+            .card-title{
+                color: rgb(88, 121, 121);
+            }
+            .form-label{
+                color: antiquewhite;
+            }
+
+        </style>
+    <title>L03E07 Quadrado da soma</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://th.bing.com/th/id/OIP.3iXxAfMU6sjtrLOPzwQ0jQHaEK?pid=ImgDet&w=1200&h=675&rs=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Quadrado da soma</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor1" class="form-label">Primeiro Valor:</label>
+                                    <input type="text" class="form-control" id="valor1">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor2" class="form-label">Segundo Valor:</label>
+                                    <input type="text" class="form-control" id="valor2">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor3" class="form-label">Terceiro Valor:</label>
+                                    <input type="text" class="form-control" id="valor3">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-success" onclick="calcular()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="resultado"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            let valor1 = document.getElementById("valor1");
+            valor1 = parseFloat(valor1.value);
+
+            let valor2 = document.getElementById("valor2");
+            valor2 = parseFloat(valor2.value);
+            
+            let valor3 = document.getElementById("valor3");
+            valor3 = parseFloat(valor3.value);
+
+            let resultado = (valor1+valor2+valor3)**2
+
+            alert("("+valor1+" + "+valor2+" + "+valor3+")² = "+resultado)
+
+        }
+    </script>
+</body>
+
+</html>
