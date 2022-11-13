@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript,Eleições,Eleitores, Bootstrap, Brazil, Brasil, Doom, urna">
+    <meta name="descripton"
+        content="Em uma eleição sindical concorreram ao cargo de presidente três candidatos (A, B e C). Durante a apuração dos votos foram computados votos nulos e votos em branco, além dos votos válidos para cada candidato. Deve ser criado um programa de computador que efetue a leitura da quantidade de votos válidos para cada candidato, além de efetuar também a leitura da quantidade de votos nulos e votos em branco. Ao final o programa deve apresentar o número total de eleitores, considerando votos válidos, nulos e em branco; o percentual correspondente de votos válidos em relação à quantidade de eleitores; o percentual correspondente de votos válidos do candidato A em relação à quantidade de eleitores; o percentual correspondente de votos válidos do candidato B em relação à quantidade de eleitores; o percentual correspondente de votos válidos do candidato C em relação à quantidade de eleitores; o percentual correspondente de votos nulos em relação à quantidade de eleitores; e por último o percentual correspondente de votos em branco em relação à quantidade de eleitores.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <!-- <style>
+            body{
+                background-color: #202025;
+            }
+            .card{
+                background-color: #303030;
+            }
+            input[type='text']{
+                background-color: #333333;
+                color:rgb(127, 119, 107);
+                border: none;
+            }
+            .card-title{
+                color: rgb(88, 121, 121);
+            }
+            .form-label{
+                color: antiquewhite;
+            }
+
+        </style> -->
+    <title>L03E08 Eleições</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://i1.wp.com/www.arkade.com.br/wp-content/uploads/2018/10/urna-eletronica-armazenamento-games-da-pra-jogar-doom-classic.jpg?fit=700%2C466&ssl=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Eleições</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="votosValidosA" class="form-label">Votos válidos do candidato A:</label>
+                                    <input type="text" class="form-control" id="votosValidosA">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="votosValidosB" class="form-label">Votos válidos do candidato B:</label>
+                                    <input type="text" class="form-control" id="votosValidosB">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="votosValidosC" class="form-label">Votos válidos do candidato C:</label>
+                                    <input type="text" class="form-control" id="votosValidosC">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="votosNulos" class="form-label">Votos nulos:</label>
+                                    <input type="text" class="form-control" id="votosNulos">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="votosBrancos" class="form-label">Votos brancos:</label>
+                                    <input type="text" class="form-control" id="votosBrancos">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-success" onclick="calcular()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="resultado"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            let votosValidosA = document.getElementById("votosValidosA");
+            votosValidosA = parseFloat(votosValidosA.value);
+
+            let votosValidosB = document.getElementById("votosValidosB");
+            votosValidosB = parseFloat(votosValidosB.value);
+            
+            let votosValidosC = document.getElementById("votosValidosC");
+            votosValidosC = parseFloat(votosValidosC.value);
+            
+            let votosBrancos = document.getElementById("votosBrancos");
+            votosBrancos = parseFloat(votosBrancos.value);
+            
+            let votosNulos = document.getElementById("votosNulos");
+            votosNulos = parseFloat(votosNulos.value);
+
+            let votosValidos= (votosValidosA+votosValidosB+votosValidosC);
+
+            let totalEleitores = (votosValidos+votosNulos+votosBrancos);
+
+            let totalPorcento = ((votosValidos*100)/totalEleitores).toFixed(2);
+            let porcentoValidoA = ((votosValidosA*100)/totalEleitores).toFixed(2);
+            let porcentoValidoB = ((votosValidosB*100)/totalEleitores).toFixed(2);
+            let porcentoValidoC = ((votosValidosC*100)/totalEleitores).toFixed(2);
+            let porcentoBranco = ((votosBrancos*100)/totalEleitores).toFixed(2);
+            let porcentoNulo = ((votosNulos*100)/totalEleitores).toFixed(2);
+
+            alert("Total de Eleitores:  "+totalEleitores+"\n"+
+                  "Porcentagem total de votos válidos: "+totalPorcento+"%"+"\n"+
+                  "Porcentagem de votos válidos do candidato A: "+porcentoValidoA+"%"+"\n"+
+                  "Porcentagem de votos válidos do candidato B: "+porcentoValidoB+"%"+"\n"+
+                  "Porcentagem de votos válidos do candidato C: "+porcentoValidoC+"%"+"\n"+
+                  "Porcentagem de votos brancos: "+porcentoBranco+"%"+"\n"+
+                  "Porcentagem de votos nulos: "+porcentoNulo+"%"+"\n"
+                  )
+
+        }
+    </script>
+</body>
+
+</html>
