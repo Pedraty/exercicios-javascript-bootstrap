@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, salario, vendas, empresa, matematica">
+    <meta name="descripton"
+        content="Faça  um  algoritmo  para  ler:  quantidade  atual  em  estoque,  quantidade  máxima  em  estoque  e quantidade  mínima  em  estoque  de  um  produto.  Calcular  e  escrever  a  quantidade  média  ((quantidade média = quantidade máxima + quantidade mínima)/2). Se a quantidade em estoque for maior ou igual a  quantidade  média  escrever  a  mensagem  'Não  efetuar  compra',  senão  escrever  a  mensagem  'Efetuar compra'. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        /* body{
+            background-color: rgb(8, 8, 8);
+        }
+        .card{
+            background-color: rgb(8, 8, 8);
+            color: rgb(119, 119, 119);
+        }
+        .card-title{
+            color:#ffc107;
+        }
+        input[type='text']{
+            background-color: rgb(8, 8, 8);
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-color:#ffc107;
+            color: #608769;
+        }
+        p{
+            margin-bottom: 30px;
+            color: #608769;
+        } */
+    </style>
+
+    <title>FACCAT26 Cálculo de Comição</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://media.tenor.com/wegzeaLt28YAAAAM/doggy-puppy.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Armazém</h5>
+                        <p>Gestão de estoque<p>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="minEstoque" class="form-label">Quantidade mínima em estoque:</label>
+                                    <input type="text" class="form-control" id="minEstoque">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="maxEstoque" class="form-label">Quantdade máxima em estoque:</label>
+                                    <input type="text" class="form-control" id="maxEstoque">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="estoqueAtual" class="form-label">Quantidade atual em estoque:</label>
+                                    <input type="text" class="form-control" id="estoqueAtual">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-warning" onclick="calcular()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            
+            let estoqueAtual = document.getElementById("estoqueAtual");
+            estoqueAtual = parseInt(estoqueAtual.value);
+            
+            let maxEstoque = document.getElementById("maxEstoque");
+            maxEstoque = parseInt(maxEstoque.value);
+            
+            let minEstoque = document.getElementById("minEstoque");
+            minEstoque = parseInt(minEstoque.value);
+
+            let mediaEstoque = (minEstoque+maxEstoque)/2
+
+            if (estoqueAtual<mediaEstoque) {
+                alert("Efetuar compra");
+
+            } else{
+                
+                alert("Não efetuar compra");
+            }
+        }
+    </script>
+</body>
+
+</html>
