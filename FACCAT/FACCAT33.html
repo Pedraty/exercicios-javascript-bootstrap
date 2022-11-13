@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, maior, positivo, valores, matematica">
+    <meta name="descripton"
+        content="Ler dois valores e imprimir uma das três mensagens a seguir: Números iguais, caso os números sejam iguais Primeiro é maior, caso o primeiro seja maior que o segundo; Segundo maior, caso o segundo seja maior que o primeiro.   ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>FACCAT33 Teste de valores</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://media.tenor.com/6K56GEvUwqwAAAAd/parrot.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Teste de valores</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor" class="form-label">Digite um valor</label>
+                                    <input type="text" class="form-control" id="valor">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor2" class="form-label">Digite outro valor</label>
+                                    <input type="text" class="form-control" id="valor2">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-danger" onclick="calcular()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+
+            let valor = document.getElementById("valor");
+            valor = parseFloat(valor.value);
+
+            let valor2 = document.getElementById("valor2");
+            valor2 = parseFloat(valor2.value);
+
+            if (valor > valor2) {
+                alert("Primeiro é maior")
+            }else {
+                if(valor2 > valor){
+                    alert("Segundo é maior")
+                }else {
+                    alert("Valores iguais")
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
