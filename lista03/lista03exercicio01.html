@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript,distributiva, matematica,soma,multiplicação">
+    <meta name="descripton"
+        content="Ler quatro números inteiros e apresentar o resultado da adição e multiplicação, baseando-se na utilização do conceito da propriedade distributiva. Ou seja, se forem lidas as variáveis A, B, C, e D, devem ser somadas e multiplicadas A com B, A com C e A com D. Depois B com C, B com D e por fim C com D. Perceba que será necessário efetuar seis operações de adição e seis operações de multiplicação e apresentar doze resultados de saída. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>L03E01 Distributiva</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+            
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://th.bing.com/th/id/R.612310fb718ee34ee2531a8c2794b70d?rik=aRtAGjRiz8OA5g&pid=ImgRaw&r=0&sres=1&sresct=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Distributiva</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor1" class="form-label">Digite o primeiro valor</label>
+                                    <input type="text" class="form-control" id="valor1">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="valor2" class="form-label">Digite o segundo valor</label>
+                                    <input type="text" class="form-control" id="valor2">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="valor3" class="form-label">Digite o terceiro valor</label>
+                                    <input type="text" class="form-control" id="valor3">
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="valor4" class="form-label">Digite o quarto valor</label>
+                                    <input type="text" class="form-control" id="valor4">
+                                </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="col btn btn-primary" onClick="distributivaSoma()">
+                            Soma
+                        </button>
+                        <button type="button" class="col btn btn-primary" onClick="distributivaMult()"
+                         data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">
+                            Multiplicação
+                        </button>
+                    </div>
+        
+                </div>
+            </div>
+            
+        </div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script>
+        function distributivaMult() {
+            let valorA = document.getElementById('valor1');
+            valorA = parseFloat(valorA.value)
+            let valorB = document.getElementById('valor2');
+            valorB = parseFloat(valorB.value)
+            let valorC = document.getElementById('valor3');
+            valorC = parseFloat(valorC.value)
+            let valorD = document.getElementById('valor4');
+            valorD = parseFloat(valorD.value)
+            
+            alert(valorA+" x "+valorB+" = "+(valorA*valorB)+"\n"+
+                   valorA+" x "+valorC+" = "+(valorA*valorC)+"\n"+ 
+                   valorA+" x "+valorD+" = "+(valorA*valorD)+"\n"+ 
+                   valorB+" x "+valorC+" = "+(valorB*valorC)+"\n"+ 
+                   valorB+" x "+valorD+" = "+(valorB*valorD)+"\n"+ 
+                   valorC+" x "+valorD+" = "+(valorC*valorD)+"\n"
+                )
+        }
+        function distributivaSoma() {
+            let valorA = document.getElementById('valor1');
+            valorA = parseFloat(valorA.value)
+            let valorB = document.getElementById('valor2');
+            valorB = parseFloat(valorB.value)
+            let valorC = document.getElementById('valor3');
+            valorC = parseFloat(valorC.value)
+            let valorD = document.getElementById('valor4');
+            valorD = parseFloat(valorD.value)
+            
+            alert(valorA+" + "+valorB+" = "+(valorA+valorB)+"\n"+
+                   valorA+" + "+valorC+" = "+(valorA+valorC)+"\n"+ 
+                   valorA+" + "+valorD+" = "+(valorA+valorD)+"\n"+ 
+                   valorB+" + "+valorC+" = "+(valorB+valorC)+"\n"+ 
+                   valorB+" + "+valorD+" = "+(valorB+valorD)+"\n"+ 
+                   valorC+" + "+valorD+" = "+(valorC+valorD)+"\n"
+                )
+
+            //Abaixo segue um código maneiro:
+            // const parent = document.getElementById("parent")
+
+            // const element = Array.from(parent.getElementsByClassName("resultado"))
+            // element.forEach(criate)
+            // function criate(element){
+            //     let box = document.createElement('div');
+            //     box.innerHTML = 'Repita';
+            //     parent.append(box);
+                
+            // }
+            
+        }
+    </script>
+</body>
+
+</html>
