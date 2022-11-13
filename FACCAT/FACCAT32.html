@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, maior, jogo, time, matematica">
+    <meta name="descripton"
+        content="Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>FACCAT32 Placar</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://media.tenor.com/dMXrJfKTDZ8AAAAC/bruno-henrique.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Placar do Jogo</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="timeA" class="form-label">Insira o nome de um dos times que jogaram:</label>
+                                    <input type="text" class="form-control" id="timeA">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="golsTimeA" class="form-label">Digite o número de gols marcados desse time:</label>
+                                    <input type="text" class="form-control" id="golsTimeA">
+                                </div>
+                            </div>
+                           <div class="row">
+                               <div class="col mb-3">
+                                   <label for="timeB" class="form-label">Insira o nome do outro time:</label>
+                                   <input type="text" class="form-control" id="timeB">
+                               </div>
+                           </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="golsTimeB" class="form-label">Digite o número de gols marcados desse time:</label>
+                                    <input type="text" class="form-control" id="golsTimeB">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-success" onclick="calcular()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+
+            let timeA = document.getElementById("timeA");
+            timeA = (timeA.value);
+
+            let golsTimeA = document.getElementById("golsTimeA");
+            golsTimeA = parseInt(golsTimeA.value);
+
+            let timeB = document.getElementById("timeB");
+            timeB = (timeB.value);
+
+            let golsTimeB = document.getElementById("golsTimeB");
+            golsTimeB = parseInt(golsTimeB.value);
+
+            if (golsTimeA < golsTimeB) {
+                alert(timeB+" venceu de "+golsTimeB+" a "+golsTimeA)
+            }else {
+                if (golsTimeA > golsTimeB) {
+                    alert(timeA+" venceu de "+golsTimeA+" a "+golsTimeB)
+                }else{
+                    alert(timeA+" "+golsTimeA+" x "+golsTimeB+" "+timeB+"\nEmpate")
+                }
+        }
+    }
+    </script>
+</body>
+
+</html>
