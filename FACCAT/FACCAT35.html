@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, maior, positivo, valores, matematica">
+    <meta name="descripton"
+        content="Ler 3 valores (A, B e C) representando as medidas dos lados de um triângulo e escrever se formam ou não um triângulo. OBS: para formar um triângulo, o valor de cada lado deve ser menor que a soma dos outros 2 lados.  ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>FACCAT35 Posto de Gasolina</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-3" id="parent">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://media.tenor.com/7-Cgoh1rnpQAAAAM/yay-woohoo.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Abasteça seu veículo</h5>
+                        <p>Combustível tipo A = R$2,90</p>
+                        <p>Combustível tipo B = R$3,30</p>
+                        <form>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="litros" class="form-label">Insira a quantidade de litros:</label>
+                                    <input type="text" class="form-control" id="litros">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="tipoCombustivel" class="form-label">Insira o tipo de combustível</label>
+                                    <input type="text" class="form-control" id="tipoCombustivel">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-cols-1">
+                        <button type="button" class="col btn btn-warning" onclick="calcular()">
+                            Calcular
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+
+            let litros = document.getElementById("litros");
+            litros = parseFloat(litros.value);
+
+            let tipoCombustivel = document.getElementById("tipoCombustivel");
+            tipoCombustivel = (tipoCombustivel.value);
+
+            valorFinal = 0
+            
+            if ((litros <= 20) && (tipoCombustivel === 'A')) {
+                valorFinal = ((litros-(litros*(3/100)))*2.90).toFixed(2)
+                alert("Preço a pagar: R$"+valorFinal)
+            }else {
+                if((litros > 20) && (tipoCombustivel === 'A')){
+                    
+                    valorFinal = ((litros-(litros*(5/100)))*2.90).toFixed(2)
+                    alert("Preço a pagar: R$"+valorFinal)
+
+                }
+            }
+            if ((litros <= 20) && (tipoCombustivel === 'B')) {
+                valorFinal = ((litros-(litros*(3/100)))*3.30).toFixed(2)
+                alert("Preço a pagar: R$"+valorFinal)
+            }else {
+                if((litros > 20) && (tipoCombustivel === 'B')){
+                    
+                    valorFinal = ((litros-(litros*(5/100)))*3.30).toFixed(2)
+                    alert("Preço a pagar: R$"+valorFinal)
+
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
