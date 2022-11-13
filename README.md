@@ -1,1 +1,1 @@
-![JavaScript Case](images/JavaScriptCase.jpeg?raw=true "JavaScriptCase")
+![JavaScript Case](image/JavascriptCase.jpeg?raw=true "JavaScriptCase")
