@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, fibonacci, números, enquanto, matematica, Bootstrap">
+    <meta name="descripton"
+        content="Escreva um programa que apresente a série de Fibonacci até o décimo quinto termo. O exemplo dessa sequência segue: 1, 1, 2, 3, 5, 8, 13, 21, 34, ..., ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MANZANOENQUANTO07 Sequência de fibonacci</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Sequência de Fibonacci</h2>
+                    <p>Até o seu 15° termo</p>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular(){ 
+            let valor1= 1;
+            let valor2 = 2;
+            let valor3, contadora = 0;
+
+            let sequencia = [1," "+2];
+            while (contadora<15){
+                valor3 = valor1+valor2
+                valor1 = valor2
+                valor2 = valor3
+                sequencia.push(" "+valor3)
+                contadora++
+            }
+            alert(sequencia)
+            
+
+            
+        }
+    </script>
+</body>
+
+</html>
