@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, media, números, enquanto, matematica, Bootstrap">
+    <meta name="descripton"
+        content=" Elaborar  um  programa  que  apresente  os  resultados  da  soma  e  da  média  aritmética  dos  valores pares situados na faixa numérica de 50 a 70.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MANZANOENQUANTO10 Média e soma de valores pares</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Média e soma de valores pares</h2>
+                    <p>de 50 a 70</p>
+                    <div id="card"></div>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            let contadora = 50;
+            let soma = 0;
+            let media = 0;
+            while (contadora<70){
+                if( contadora%2 === 0){
+                    soma = soma + contadora;
+                }
+                contadora++
+            }
+            media = soma/10
+            alert("A soma é "+soma+"\n"+
+            "A média é "+media)
+
+        }
+
+            
+
+            
+    </script>
+</body>
+
+</html>
