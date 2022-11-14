@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, fibonacci, números, enquanto, matematica, Bootstrap">
+    <meta name="descripton"
+        content="Elaborar um programa que apresente os valores de conversão de graus Celsius em Fahrenheit, de 10 em 10 graus, iniciando a contagem em 10 graus Celsius e finalizando em 100 graus Celsius. O programa   deve   apresentar   os   valores   das   duas   temperaturas">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MANZANOENQUANTO08 Fahrenheit para celsius</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Fahrenheit para celsius</h2>
+                    <p>De 10 em 10 até 100</p>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular(){ 
+            let celsius= 0;
+            let fahrenheit = 0;
+
+            let sequencia = [];
+            while (celsius<=100){
+                celsius = celsius + 10
+                fahrenheit = (9*celsius+160)/5
+                sequencia.push(celsius+"°C é igual à "+fahrenheit+"°F\n")
+            }
+            alert(sequencia)
+            
+
+            
+        }
+    </script>
+</body>
+
+</html>
