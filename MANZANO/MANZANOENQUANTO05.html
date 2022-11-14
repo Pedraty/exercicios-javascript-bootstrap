@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, somatório, números, enquanto, matematica, Bootstrap">
+    <meta name="descripton"
+        content="Elaborar um programa que apresente no final o somatório dos valores ímpares existentes na faixa de 0 até 20.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MANZANOENQUANTO05 Potências de três</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>15 potências de três</h2>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular(){ 
+            let contadora= 1;
+            let resultado = 1;
+
+            let lista = ["3 elevado a 0 = 1 \n"];
+            while (contadora<16){
+                resultado = 3*resultado
+                lista.push("3 elevado a "+contadora+" = "+resultado+"\n")
+                contadora++
+            }
+            alert(lista)
+            
+
+            
+        }
+    </script>
+</body>
+
+</html>
