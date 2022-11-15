@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, fatorial, números, repita, matematica, Bootstrap">
+    <meta name="descripton"
+        content="   Elaborar um programa que efetue a leitura de 15 valores numéricos inteiros e no final apresente o total do somatório da fatorial de cada valor lido.  ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MAZANOREPITA06 Cálculo do fatorial</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Cálculo do fatorial</h2>
+                    <p>Dos números inteiros ímpares de 1 a 10</p>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            let comodo = "";
+            let areaTotal = 0;
+            let areaComodo = 0;
+            let resposta = "";
+            let comprimento = 0;
+            let largura = 0;
+
+
+            do {
+                comodo = prompt("Nome do cômodo: ")
+                largura = parseFloat(prompt("Largura: "))
+                comprimento = parseFloat(prompt("Comprimento: "))
+                areaComodo = largura*comprimento
+                areaTotal = areaTotal+areaComodo
+                alert("Area do cômodo é "+areaComodo+"\nÁrea total é "+areaTotal)
+                resposta = prompt("Deseja continuar adicionando cômdos?(S/N)")
+
+                
+            } while (resposta != "N");
+            alert("Finalizando execução")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
