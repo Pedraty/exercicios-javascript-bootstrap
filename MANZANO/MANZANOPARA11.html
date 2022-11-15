@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, números, para, matematica, Bootstrap">
+    <meta name="descripton"
+        content="Elaborar  um  programa  que  apresente  como  resultado  o  valor  do  fatorial  dos  valores  ímpares situados na faixa numérica de 1 a 10.">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MAZANOPARA11 Fatorial dos números inteiros ímpares</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Fatorial dos números inteiros ímpares</h2>
+                    <p>De 1 a 10(ver console)</p>
+                </div>
+                <button type="submit" class="btn btn-success" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            let contadora = 0;
+            let numero = 0;
+            let fatorial = 0;
+            let incremento = 0;
+
+            for(numero = 1; numero < 11; numero++){
+                incremento = 1
+                contadora = (numero-incremento)
+                if ((contadora>1)&& (numero % 2 != 0)){
+                    fatorial = numero*(numero-incremento)
+                    for(incremento = 2; incremento < (numero-1); incremento++ ){
+                        fatorial = fatorial*(numero-incremento)
+
+                    }
+                    console.log(numero+" fatorial é "+fatorial)
+                }
+                
+            }
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
