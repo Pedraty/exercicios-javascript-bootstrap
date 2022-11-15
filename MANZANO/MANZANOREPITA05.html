@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, fatorial, números, repita, matematica, Bootstrap">
+    <meta name="descripton"
+        content="   Elaborar um programa que efetue a leitura de 15 valores numéricos inteiros e no final apresente o total do somatório da fatorial de cada valor lido.  ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MAZANOREPITA05 Cálculo do fatorial</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Cálculo do fatorial</h2>
+                    <p>Escreva 15 números e experimente</p>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular() {            
+            let numero = 0;let antes = 0;let fatorial = 0;let contadora = 0;let soma = 0;let fator = 0;
+            do {
+                numero = parseInt(prompt("Digite um valor inteiro"));
+                 antes = 1;
+                // fator = numero-antes;
+                 fatorial = numero*(numero-antes);
+                do {
+                    antes++;
+                    // fator = (numero-antes);
+                    fatorial = fatorial*(numero-antes);
+                } while ((numero-antes) != 1);
+                 soma = soma+fatorial;
+                contadora++
+                
+            } while (contadora != 15);
+            alert("O somatório dos fatorias dos valores lidos é: "+soma)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
