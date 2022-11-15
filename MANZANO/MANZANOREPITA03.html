@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, números, repita, matematica, Bootstrap">
+    <meta name="descripton"
+        content=" Apresentar  todos  os  números  divisíveis  por  4  que  sejam  menores  que  200.  Para  verificar  se  o número  é  divisível  por  4,  efetuar  dentro  da  malha  a  verificação  lógica  desta  condição  com  a instrução se,  perguntando  se  o  número  é  divisível;  sendo,  mostre-o;  não  sendo,  passe  para  o próximo passo. A variável que controlará o contador deve ser iniciada com o valor 1.  ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MAZANOREPITA03 Divisíveis por quatro </title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Divisíveis por quatro </h2>
+                    <p>Veja o console</p>
+                </div>
+                <button type="submit" class="btn btn-warning" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular(){ 
+            let contadora= 1;
+            let soma = [];
+            do {
+                if(contadora%4==0){
+                    console.log(contadora)
+                    
+                }
+                contadora++
+
+            } while (contadora < 201);
+
+            
+
+            
+        }
+    </script>
+</body>
+
+</html>
