@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, números, repita, matematica, Bootstrap">
+    <meta name="descripton"
+        content="Apresentar os quadrados dos números inteiros de 15 a 200. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MAZANOREPITA01 Quadrado </title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Quadrado </h2>
+                    <p>De 15 a 200, veja pelo console</p>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular(){ 
+            let contadora= 15;
+            let quadrado = 0;
+            let resultado = []
+            do {
+                quadrado = contadora*contadora
+                console.log(quadrado)
+                resultado.push("\n"+quadrado)
+                contadora++
+
+            } while (contadora < 200);
+            alert(resultado)
+
+            
+
+            
+        }
+    </script>
+</body>
+
+</html>
