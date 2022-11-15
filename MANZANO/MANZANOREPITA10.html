@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, fatorial, números, repita, matematica, Bootstrap">
+    <meta name="descripton"
+        content=" Elaborar  um  programa  que  apresente  o  resultado  inteiro  da  divisão  de  dois  números  quaisquer. Para a elaboração do programa, não utilizar em hipótese alguma o conceito do operador aritmético DIV.  A  solução  deve  ser  alcançada  com  a  utilização de  looping.  Ou  seja,  o  programa  deve apresentar como resultado (quociente) quantas vezes o divisor cabe no dividendo.  ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MAZANOREPITA10 Mostrar o quociente com REPITA</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Mostrar o quociente</h2>
+                    <p>Utilizando o laço repita</p>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            let quociente = 0;
+            let divisor = 0;
+            let valor2 = 0;
+            let dividendo = 0;
+
+            dividendo  = parseFloat(prompt("Digite um valor:"))
+            valor2  = parseFloat(prompt("Digite um valor para dividir o primeiro :"))
+            
+ 
+                do {
+                    divisor  = divisor + valor2
+                    quociente++
+                } while (divisor<dividendo);
+
+
+            
+            alert("Quociente é "+quociente)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
