@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, area, metros, comodos, números, enquanto, matematica, Bootstrap">
+    <meta name="descripton"
+        content="  Elaborar  um  programa  que  efetue  a  leitura  de  valores  positivos  inteiros  até  que  um  valor  negativo seja  informado.  Ao  final  devem  ser  apresentados  o  maior  e  o  menor  valores  informados  pelo usuário. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MANZANOENQUANTO12 Maior e menor valor de um laço</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Maior e menor valor de um laço</h2>
+                    <p>O laço só irá para quando escrever um número negativo</p>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular() {            
+            let valor = parseInt(prompt("Digite um valor inteiro"));
+            let maior = valor;
+            let menor = valor;
+            while (valor>0) {
+                valor = parseInt(prompt("Digite um valor inteiro"));
+                if (valor>maior) {
+                    maior = valor;
+                } else {
+                    if (valor<menor){
+                        menor = valor;
+                    }
+                    
+                }
+            }
+            alert("Programa interrompido, pois valor é negativo \n \nO maior valor é "+maior+"\nJá o menor é "+menor)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
