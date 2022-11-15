@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Fonseca">
+    <meta name="keyword" content="Exercício, JavaScript, números, repita, matematica, Bootstrap">
+    <meta name="descripton"
+        content=" Elaborar um programa que efetue o cálculo e no final apresente o somatório do número de grãos de trigo que se pode obter num tabuleiro de xadrez, obedecendo à seguinte regra: colocar um grão de trigo no primeiro quadro e nos quadros seguintes o dobro do quadro anterior. Ou seja, no primeiro quadro coloca-se 1 grão, no segundo quadro colocam-se 2 grãos (neste momento têm-se 3 grãos), no  terceiro  quadro  colocam-se  4  grãos  (tendo  neste momento  7  grãos),  no  quarto  colocam-se  8 grãos  (tendo-se  então  15  grãos)  até  atingir  o  sexagésimo  quarto  (64o)  quadro.  Utilize  variáveis  do tipo real como acumuladores. ">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>MAZANOREPITA03 Número de grãos no tabuleiro </title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-3">
+            <div class="card p-5">
+                <div class="title text-center">
+                    <h2>Número de grãos no tabuleiro </h2>
+                    <p>Veja o console</p>
+                </div>
+                <button type="submit" class="btn btn-danger" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular(){ 
+            let graos= 1;
+            let soma = 0;
+            let quadro = 1;
+            do {
+                
+                graos = graos*2
+                
+                soma = soma + graos
+
+                quadro++
+
+
+            } while (quadro != 63);
+            console.log(soma)
+            alert(soma)
+
+            
+
+            
+        }
+    </script>
+</body>
+
+</html>
